@@ -28,7 +28,7 @@
   "license": "MIT",
 
   "jest": {
-    "testMatch": ["/tests//*.test.js"]
+    "testMatch": ["../tests/**/*.test.js"]
   },
 
   "dependencies": {
