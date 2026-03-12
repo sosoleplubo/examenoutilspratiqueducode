@@ -74,4 +74,4 @@ describe("Tests API gestionnaire de tâches", () => {
     expect(res.statusCode).toBe(400);
     expect(res.body.error).toBe("Le titre est requis");
   });
-});
+}); 
