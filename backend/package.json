@@ -14,6 +14,11 @@
     "lint:fix": "eslint . --fix",
     "test:e2e": "node tests/e2e/selenium.test.js"
   },
+
+  "jest": {
+    "testMatch": ["**/tests/**/*.test.js"]
+  },
+
   "keywords": [
     "task-manager",
     "api",
