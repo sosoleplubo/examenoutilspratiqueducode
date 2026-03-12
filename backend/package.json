@@ -26,6 +26,11 @@
   ],
   "author": "ESGI Students",
   "license": "MIT",
+
+  "jest": {
+    "testMatch": ["/tests//*.test.js"]
+  },
+
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "cors": "^2.8.5",
