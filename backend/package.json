@@ -16,6 +16,11 @@
   "keywords": ["task-manager", "api", "express"],
   "author": "ESGI Students",
   "license": "MIT",
+
+  "jest": {
+    "testMatch": ["/tests//*.test.js"]
+  },
+
   "dependencies": {
     "express": "^4.19.2",
     "cors": "^2.8.5",
