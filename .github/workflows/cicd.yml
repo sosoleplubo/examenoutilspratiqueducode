@@ -1,0 +1,48 @@
+name: CI Pipeline
+
+on:
+  pull_request:
+    branches: [develop]
+
+jobs:
+  ci:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
+      # Backend install
+      - name: Install backend dependencies
+        run: |
+          cd backend
+          npm install
+
+      # Frontend install
+      - name: Install frontend dependencies
+        run: |
+          cd frontend
+          npm install
+
+      # ESLint (analyse de code)
+      - name: Run ESLint
+        run: |
+          cd backend
+          npm run lint
+
+      # Tests backend
+      - name: Run backend tests
+        run: |
+          cd backend
+          npm test
+
+      # Couverture de code
+      - name: Generate test coverage
+        run: |
+          cd backend
+          npm run test:coverage
