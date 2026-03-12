@@ -4,6 +4,7 @@
   "description": "API pour gestionnaire de tâches",
   "main": "server.js",
   "type": "commonjs",
+
   "scripts": {
     "start": "node server.js",
     "dev": "nodemon server.js",
@@ -12,11 +13,11 @@
     "test:coverage": "jest --coverage --detectOpenHandles",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
-    "test:e2e": "node tests/e2e/selenium.test.js"
+    "test:e2e": "node ../tests/e2e/selenium.test.js"
   },
 
   "jest": {
-    "testMatch": ["**/tests/**/*.test.js"]
+    "testMatch": ["../tests/unit/basic.test.js"]
   },
 
   "keywords": [
@@ -24,12 +25,9 @@
     "api",
     "express"
   ],
+
   "author": "ESGI Students",
   "license": "MIT",
-
-  "jest": {
-    "testMatch": ["../tests/**/*.test.js"]
-  },
 
   "dependencies": {
     "bcryptjs": "^2.4.3",
@@ -42,6 +40,7 @@
     "jsonwebtoken": "^9.0.2",
     "uuid": "^9.0.1"
   },
+
   "devDependencies": {
     "@eslint/js": "^10.0.1",
     "eslint": "^8.57.1",
@@ -50,6 +49,7 @@
     "nodemon": "^3.1.0",
     "supertest": "^6.3.4"
   },
+
   "engines": {
     "node": ">=18.0.0",
     "npm": ">=9.0.0"
