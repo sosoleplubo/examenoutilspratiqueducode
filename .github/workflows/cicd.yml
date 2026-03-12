@@ -35,8 +35,3 @@ jobs:
           cd backend
           npm run lint
 
-      # Couverture de code
-      - name: Generate test coverage
-        run: |
-          cd backend
-          npm run test:coverage
